@@ -3,351 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة يوسف العكلوك للصيانة والتشغيل والمقاولات</title>
-    <!-- Bootstrap RTL CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" crossorigin="anonymous">
-    <!-- Tajawal font for Arabic -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>المحاسب عزوز</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
-            font-family: 'Tajawal', Arial, sans-serif;
-            background: linear-gradient(135deg, #eaf3fa 0%, #f8f9fa 100%);
-            color: #222;
+            font-family: 'Cairo', Arial, sans-serif;
+            background: #f5f6fa;
+            color: #232323;
+            margin: 0;
+            min-height: 100vh;
         }
-        .main-header {
-            background: linear-gradient(90deg, #1e375a 80%, #2e5c9a 100%);
-            color: #fff;
-            padding: 3.5rem 0 2rem 0;
+        .header {
+            background: #f7f7f7;
+            color: #2d3a4a;
+            padding: 32px 0 16px 0;
             text-align: center;
-            border-bottom-left-radius: 2.5rem;
-            border-bottom-right-radius: 2.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 8px 32px rgba(30,55,90,0.12);
-            position: relative;
-            overflow: hidden;
+            border-bottom: 2px solid #e0e0e0;
+            box-shadow: 0 2px 8px #e0e0e033;
         }
-        .main-header .logo-circle {
-            width: 90px;
-            height: 90px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.2rem auto;
-            box-shadow: 0 4px 24px rgba(30,55,90,0.10);
+        .header .title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
         }
-        .main-header .logo-circle i {
-            font-size: 2.8rem;
-            color: #1e375a;
-        }
-        .main-header h1 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-            margin-bottom: 0.7rem;
-            text-shadow: 0 2px 8px rgba(30,55,90,0.10);
-        }
-        .main-header .lead {
-            font-size: 1.35rem;
-            font-weight: 500;
-            color: #eaf3fa;
-            margin-bottom: 0.5rem;
-        }
-        .main-header .slogan {
+        .header .subtitle {
             font-size: 1.1rem;
-            color: #b6d0f7;
-            margin-top: 0.5rem;
+            color: #555;
             font-weight: 400;
         }
-        .project-highlight {
-            background: linear-gradient(90deg, #eaf3fa 80%, #d0e6f7 100%);
-            border-right: 7px solid #1e375a;
-            padding: 1.5rem 2rem;
-            margin: 2.5rem 0;
-            border-radius: 1.2rem;
-            font-size: 1.18em;
-            box-shadow: 0 2px 12px rgba(30,55,90,0.07);
-            font-weight: 600;
-        }
-        .project-highlight strong {
-            color: #1e375a;
-            font-size: 1.1em;
-        }
-        .list-group-item {
-            font-size: 1.08em;
-            font-weight: 500;
-            border: none;
-            background: transparent;
-            padding-right: 2.2rem;
+        .main-content {
+            max-width: 900px;
+            margin: 32px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px 0 #e0e0e0;
+            padding: 28px 18px 18px 18px;
             position: relative;
         }
-        .list-group-item::before {
-            content: "\f26b";
-            font-family: "bootstrap-icons";
-            color: #1e375a;
-            font-size: 1.1em;
-            position: absolute;
-            right: 0.5rem;
-            top: 0.7em;
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 22px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
         }
-        .contact-info a {
-            color: #1e375a;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .contact-info i {
-            color: #2e5c9a;
-            font-size: 1.2em;
-            vertical-align: middle;
-        }
-        .contact-info li {
-            font-size: 1.08em;
-            margin-bottom: 0.7em;
-        }
-        .about-section {
-            background: #fff;
-            border-radius: 1.2rem;
-            box-shadow: 0 2px 12px rgba(30,55,90,0.06);
-            padding: 2rem 2.2rem 1.5rem 2.2rem;
-            margin-bottom: 2.2rem;
-        }
-        .about-section p {
-            font-size: 1.15em;
-            font-weight: 500;
-            color: #2e5c9a;
-        }
-        h2 {
-            color: #1e375a;
-            margin-top: 0;
-            margin-bottom: 1.2rem;
-            font-size: 1.45rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-        }
-        .btn-contact {
-            background: linear-gradient(90deg, #1e375a 80%, #2e5c9a 100%);
-            color: #fff;
-            font-weight: 700;
-            border: none;
-            border-radius: 2rem;
-            padding: 0.7rem 2.2rem;
-            font-size: 1.1em;
-            margin-top: 1.2rem;
+        .info-list li {
+            background: #f3f3f3;
+            border-right: 3px solid #d1cfc7;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 1.02rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2d3a4a;
             transition: background 0.2s;
         }
-        .btn-contact:hover {
-            background: linear-gradient(90deg, #2e5c9a 80%, #1e375a 100%);
-            color: #fff;
-        }
-        footer {
+        .info-list li i {
+            color: #bfa100;
+            font-size: 1em;
+            min-width: 20px;
             text-align: center;
-            color: #888;
-            padding: 1.5rem 0 1rem 0;
-            font-size: 1.05em;
-            margin-top: 2.5rem;
-            background: #f1f3f6;
-            border-top: 1px solid #e3e3e3;
-            letter-spacing: 0.5px;
         }
-        /* مطور الموقع */
-        .developer-section {
-            text-align: center;
-            margin: 0 auto 1.5rem auto;
-            padding: 1.2rem 0 0.5rem 0;
-            color: #1e375a;
-            font-size: 1.08em;
+        .badges {
+            margin: 12px 0 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-start;
+        }
+        .badge-custom {
+            background: #f3f3f3;
+            color: #2d3a4a;
+            border-radius: 12px;
+            padding: 5px 14px;
+            font-size: 0.97rem;
             font-weight: 600;
-            background: none;
+            box-shadow: 0 1px 3px #e0e0e033;
+            border: 1px solid #eaeaea;
+            letter-spacing: 0.2px;
+            transition: background 0.15s, color 0.15s;
         }
-        .developer-section i {
-            color: #2e5c9a;
-            margin-left: 0.4em;
-            font-size: 1.2em;
-            vertical-align: middle;
+        .badge-custom:hover {
+            background: #eaeaea;
+            color: #bfa100;
+        }
+        .section-title {
+            font-size: 1.05rem;
+            color: #bfa100;
+            margin: 24px 0 8px 0;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .about-me, .skills, .contact, .company-link {
+            margin-bottom: 14px;
+        }
+        .about-me p {
+            line-height: 1.9;
+            color: #333;
+            margin: 0;
+            background: #f7f7f7;
+            border-radius: 6px;
+            padding: 12px 12px;
+            font-size: 1.01rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            background: #2d3a4a;
+            padding: 14px 0 8px 0;
+            border-radius: 0 0 0 0;
+            box-shadow: 0 -2px 8px #2d3a4a22;
+        }
+        a {
+            color: #2d3a4a;
+            text-decoration: underline;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #bfa100;
+        }
+        @media (max-width: 900px) {
+            .main-content {
+                padding: 12px 4px 12px 4px;
+            }
+            .info-list {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 600px) {
-            .main-header h1 {
-                font-size: 1.5rem;
+            .header .title {
+                font-size: 1.3rem;
             }
-            .main-header .lead {
-                font-size: 1rem;
+            .main-content {
+                margin: 12px 2px 0 2px;
             }
-            .about-section, .project-highlight {
-                padding: 1.2rem 1rem;
+            .section-title {
+                font-size: 0.95rem;
             }
-            /* إصلاح مشكلة تراكب النافبار */
-            .navbar-collapse {
-                position: absolute;
-                top: 100%;
-                right: 0;
-                left: 0;
-                background: #fff;
-                z-index: 1000;
-                border-bottom-left-radius: 1rem;
-                border-bottom-right-radius: 1rem;
-                box-shadow: 0 4px 16px rgba(30,55,90,0.08);
-                padding: 1rem 0.5rem;
-            }
-            .navbar-nav .nav-link {
-                padding: 0.7rem 1rem;
-                text-align: right;
-            }
-            .navbar {
-                position: relative;
-            }
-            .developer-section {
-                font-size: 0.98em;
-                padding: 0.8rem 0 0.3rem 0;
+            .about-me p {
+                font-size: 0.93rem;
+                padding: 7px 5px;
             }
         }
-        /* إصلاح مشكلة navbar في الجوالات */
-        @media (max-width: 991.98px) {
-            .navbar-collapse {
-                background: #fff;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                left: 0;
-                z-index: 1000;
-                border-bottom-left-radius: 1rem;
-                border-bottom-right-radius: 1rem;
-                box-shadow: 0 4px 16px rgba(30,55,90,0.08);
-                padding: 1rem 0.5rem;
-            }
-            .navbar-nav .nav-link {
-                padding: 0.7rem 1rem;
-                text-align: right;
-            }
-            .navbar {
-                position: relative;
-            }
+        /* New style for company link section */
+        .company-link {
+            background: #f7f7f7;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.01rem;
+        }
+        .company-link i {
+            color: #bfa100;
+            font-size: 1.1em;
+        }
+        .company-link a {
+            color: #2d3a4a;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .company-link a:hover {
+            color: #bfa100;
         }
     </style>
 </head>
 <body>
-    <!-- NavBar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0" style="position:relative;z-index:1020;">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
-          <i class="bi bi-building me-2"></i>
-          مؤسسة يوسف العكلوك
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="تبديل القائمة">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">من نحن</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">خدماتنا</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">تواصل معنا</a>
-            </li>
-          </ul>
+    <div class="header">
+        <div class="title"><i class="fa-solid fa-calculator"></i> المحاسب عزوز</div>
+    </div>
+    <div class="main-content" dir="rtl">
+        <!-- مكان مسار صفحة الشركة -->
+        <div class="company-link">
+            <i class="fa-solid fa-building"></i>
+            <span>صفحة شركة يوسف العكلوك للمقاولات:</span>
+            <a href="Aklouk.html" target="_blank">اضغط هنا</a>
         </div>
-      </div>
-    </nav>
-    <!-- NavBar End -->
-
-    <header class="main-header">
-        <div class="logo-circle">
-            <i class="bi bi-building"></i>
+        <ul class="info-list">
+            <li><i class="fa-solid fa-user"></i>العمر: ٢٢ سنة</li>
+            <li><i class="fa-solid fa-building"></i>أعمل في شركة يوسف العكلوك للمقاولات</li>
+            <li><i class="fa-solid fa-graduation-cap"></i>خريج قسم المحاسبة المالية - جامعة أم القرى</li>
+            <li><i class="fa-solid fa-certificate"></i>حاصل على شهادة المحاسبة</li>
+            <li><i class="fa-solid fa-book-open"></i>أدرس شهادة CMA</li>
+            <li><i class="fa-solid fa-code"></i>مبرمج ومختبر اختراق</li>
+            <li><i class="fa-solid fa-award"></i>حاصل على شهادات في لغات البرمجة</li>
+        </ul>
+        <div class="badges">
+            <span class="badge-custom">محاسب مالي</span>
+            <span class="badge-custom">مبرمج</span>
+            <span class="badge-custom">مختبر اختراق</span>
+            <span class="badge-custom">CMA Student</span>
+            <span class="badge-custom">شهادات برمجة</span>
         </div>
-        <div class="container">
-            <h1 class="display-5 fw-bold mb-2">مؤسسة يوسف العكلوك للصيانة والتشغيل والمقاولات</h1>
-            <p class="lead mb-0">نصنع الفارق في عالم الصيانة والتشغيل والمقاولات</p>
-            <div class="slogan">ثقة، جودة، التزام... شريكك الأمثل للنجاح</div>
+        <div class="about-me">
+            <div class="section-title"><i class="fa-solid fa-lightbulb"></i> عني</div>
+            <p>
+                أنا عبدالعزيز، عمري ٢٢ سنة، أعمل في شركة يوسف العكلوك للمقاولات.<br>
+                خريج قسم المحاسبة المالية من جامعة أم القرى وحاصل على شهادة المحاسبة.<br>
+                أطمح لتطوير نفسي أكثر في المجال المالي وأدرس حالياً شهادة CMA.<br>
+                بالإضافة إلى ذلك، أنا شغوف بمجال البرمجة واختبار الاختراق، ولدي عدة شهادات في لغات البرمجة.<br>
+                أؤمن أن الجمع بين المهارات المالية والتقنية هو سر النجاح في المستقبل.<br>
+                اسمي المهني: <b>المحاسب عزوز</b>.
+            </p>
         </div>
-    </header>
-    <main>
-        <div class="container shadow-lg bg-white rounded-4 p-4 mb-5" style="max-width: 900px;">
-            <section class="about-section mb-4" id="about">
-                <h2 class="h4 fw-bold">من نحن</h2>
-                <p>
-                    <span style="font-size:1.2em;font-weight:700;color:#1e375a;">مؤسسة يوسف العكلوك</span> هي مؤسسة سعودية رائدة في مجال الصيانة والتشغيل والمقاولات، بخبرة تتجاوز <span style="color:#2e5c9a;font-weight:700;">١٥ عاماً</span> من الإنجازات والنجاحات في تنفيذ المشاريع الكبرى والمعقدة في جميع أنحاء المملكة.
-                    <br><br>
-                    نؤمن أن الجودة ليست خياراً بل التزام، ونضع بين يدي عملائنا حلولاً متكاملة تجمع بين الاحترافية، الابتكار، والدقة في التنفيذ، مع التزام صارم بأعلى معايير السلامة والجودة.
-                </p>
-            </section>
-            <div class="project-highlight">
-                <strong>إنجازاتنا العملاقة:</strong><br>
-                تنفيذ مشروع استثنائي بقيمة <strong>١٢ مليون ريال</strong> لصيانة وتشغيل مرافق والبلديات التابعة لأمانة العاصمة المقدسة بمكة المكرمة، مع سجل حافل بالنجاحات في مشاريع حكومية وخاصة على مستوى المملكة.
-            </div>
-            <section class="mb-4" id="services">
-                <h2 class="h4 fw-bold">خدماتنا المتميزة</h2>
-                <ul class="list-group list-group-flush mb-3">
-                    <li class="list-group-item">صيانة وتشغيل المرافق العامة والبنية التحتية</li>
-                    <li class="list-group-item">إدارة وتشغيل البلديات والمنشآت الحكومية</li>
-                    <li class="list-group-item">أعمال المقاولات العامة (إنشاءات، ترميمات، تطوير عمراني)</li>
-                    <li class="list-group-item">خدمات الدعم الفني والإشراف الهندسي المتخصص</li>
-                    <li class="list-group-item">حلول مبتكرة لإدارة المشاريع وتطويرها</li>
-                </ul>
-            </section>
-            <section id="contact">
-                <h2 class="h4 fw-bold">تواصل معنا الآن</h2>
-                <ul class="list-unstyled contact-info mb-0">
-                    <li class="mb-1">
-                        <i class="bi bi-geo-alt-fill me-1"></i>
-                        <span style="font-weight:600;">العنوان:</span> مكة المكرمة، المملكة العربية السعودية
-                    </li>
-                    <li class="mb-1">
-                        <i class="bi bi-envelope-fill me-1"></i>
-                        <span style="font-weight:600;">البريد الإلكتروني:</span> <a href="mailto:info@yousef-alkallouk.com">info@yousef-alkallouk.com</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-telephone-fill me-1"></i>
-                        <span style="font-weight:600;">الهاتف:</span> <a href="tel:+966500000000">+966 50 000 0000</a>
-                    </li>
-                </ul>
-                <a href="mailto:info@yousef-alkallouk.com" class="btn btn-contact mt-3"><i class="bi bi-envelope-paper me-2"></i>راسلنا الآن</a>
-            </section>
+        <div class="skills">
+            <div class="section-title"><i class="fa-solid fa-laptop-code"></i> مهاراتي</div>
+            <ul class="info-list">
+                <li><i class="fa-solid fa-check"></i>المحاسبة المالية</li>
+                <li><i class="fa-solid fa-check"></i>إعداد التقارير المالية</li>
+                <li><i class="fa-solid fa-check"></i>برمجة (Python, JavaScript, وغيرها)</li>
+                <li><i class="fa-solid fa-check"></i>اختبار الاختراق وأمن المعلومات</li>
+                <li><i class="fa-solid fa-check"></i>تحليل البيانات</li>
+            </ul>
         </div>
-        <!-- مطور الموقع -->
-        <section class="developer-section">
-            <i class="bi bi-code-slash"></i>
-            مطور الموقع: عبدالعزيز علي العروي
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 مؤسسة يوسف العكلوك للصيانة والتشغيل والمقاولات. جميع الحقوق محفوظة.<br>
-        <span style="color:#1e375a;font-weight:600;">نحو مستقبل أكثر إشراقاً في عالم المقاولات</span>
-    </footer>
-    <!-- Bootstrap JS (optional, for components) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script>
-      // إصلاح مشكلة إغلاق القائمة عند الضغط على رابط في الجوال
-      document.addEventListener('DOMContentLoaded', function () {
-        var navbarCollapse = document.getElementById('mainNavbar');
-        var navLinks = navbarCollapse.querySelectorAll('.nav-link');
-        var bsCollapse = null;
-        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-          bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
-        }
-        navLinks.forEach(function(link) {
-          link.addEventListener('click', function() {
-            if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-              if (bsCollapse) {
-                bsCollapse.hide();
-              } else {
-                // fallback
-                navbarCollapse.classList.remove('show');
-              }
-            }
-          });
-        });
-      });
-    </script>
+        <div class="contact">
+            <div class="section-title"><i class="fa-solid fa-envelope"></i> تواصل معي</div>
+            <ul class="info-list">
+                <li><i class="fa-brands fa-whatsapp"></i>واتساب: <a href="https://wa.me/966570002364">اضغط هنا</a></li>
+                <li><i class="fa-solid fa-envelope"></i>الإيميل: <a href="mailto:abdulazizarawi101@gmail.com">abdulazizarawi101@gmail.com</a></li>
+                <li><i class="fa-brands fa-linkedin"></i>لينكدإن: <a href="https://www.linkedin.com/in/azouz-accountant">azouz-accountant</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2025 المحاسب عزوز. جميع الحقوق محفوظة.
+    </div>
 </body>
 </html>
